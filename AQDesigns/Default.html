@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .mySlides {
+            display: none
+        }
+
+        .w3-left, .w3-right, .w3-badge {
+            cursor: pointer
+        }
+
+        .w3-badge {
+            height: 13px;
+            width: 13px;
+            padding: 0
+        }
+
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Karma", sans-serif
+        }
+
+        .w3-bar-block .w3-bar-item {
+            padding: 20px
+        }
+
+        .logo {
+            width: 100%;
+            height: auto;
+        }
+
+        img {
+            width: 450px;
+            height: 500px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Top menu -->
+        <div class="w3-container w3-center">
+            <img class="logo" src="images/logo.jpg" />
+        </div>
+        <div class="w3-bar w3-grey">
+            <a href="#" id="Hnavtabz" class="w3-bar-item w3-button w3-green" onclick="Change_tab('H'); return false;">Home</a>
+            <a href="#" id="Gnavtabz" class="w3-bar-item w3-button w3-hide-small" onclick="Change_tab('G'); return false;">Gallary</a>
+            <a href="#" id="Qnavtabz" class="w3-bar-item w3-button w3-hide-small" onclick="Change_tab('Q'); return false;">Query</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div id="navi" class="w3-bar-block w3-grey w3-hide w3-hide-large w3-hide-medium">
+            <a href="#" class="w3-bar-item w3-button" onclick="Change_tab('H'); return false;">Home</a>
+            <a href="#" class="w3-bar-item w3-button" onclick="Change_tab('G'); return false;">Gallary</a>
+            <a href="#" class="w3-bar-item w3-button" onclick="Change_tab('Q'); return false;">Query</a>
+        </div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main w3-content " style="max-width:1200px;margin-top:50px">
+
+            <!-- Pictures Tab -->
+            <div id="pictures" class="user w3-container w3-light-grey w3-card-2" style=" width: 100%;margin:auto;">
+                <div class="w3-container w3-green">
+                    <h2>Images</h2>
+                </div>
+                <div class="w3-container">
+                </div>
+
+                <div id="myPictures" class="w3-content w3-display-container" style="max-width:800px;padding:5%" >
+                    
+                    <div id="myButtons" class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="gallary" class="user w3-container w3-light-grey w3-card-2" style=" width: 100%;margin:auto;display:none;">
+                <div class="w3-container w3-green">
+                    <h2>Gallary</h2>
+                </div>
+                <div class="w3-container">
+                </div>
+
+                <!-- First Photo Grid-->
+                <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+                    <div class="w3-threequarter w3-center">
+                        <img src="images/IMG-20171215-WA0000.jpg" alt="Sandwich" style="width:100%">
+                              
+                    </div>
+
+                    <!-- Second Photo Grid-->
+                    <div class="w3-row-padding w3-padding-16 w3-center">
+                        <div class="w3-quarter">
+                            <img src="images/IMG-20171215-WA0003.jpg" alt="Popsicle" style="width:100%">
+
+                        </div>
+                        <div class="w3-quarter">
+                            <img src="images/IMG-20171215-WA0004.jpg" alt="Salmon" style="width:100%">
+
+                        </div>
+                        <div class="w3-quarter">
+                            <img src="images/IMG-20171215-WA0005.jpg" alt="Sandwich" style="width:100%">
+
+                        </div>
+                        <div class="w3-quarter">
+                            <img src="images/IMG-20171215-WA0006.jpg" alt="Croissant" style="width:100%">
+
+                        </div>
+                    </div>
+
+                    <!-- Third Photo Grid-->
+                    <div class="w3-row-padding w3-padding-16 w3-center">
+                        <div class="w3-half">
+                            <img src="images/IMG-20171215-WA0007.jpg" alt="Popsicle" style="width:100%">
+
+                        </div>
+                        <div class="w3-half">
+                            <img src="images/IMG-20171215-WA0008.jpg" alt="Salmon" style="width:100%">
+
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+
+                <!-- Queries Tab -->
+                <div id="queries" class="user w3-container w3-light-grey w3-card-2" style="display: none; width: 100%;margin:auto;">
+                    <div class="w3-container w3-green">
+                        <h2>Queries</h2>
+                    </div>
+
+                    <!-- Query form -->
+
+                    <p>All manditory fields are indicated with *</p>
+                    <p>
+                        <label>First Name:*</label>
+                        <input class="w3-input" type="text" placeholder="Enter your name.." required>
+                    </p>
+                    <p>
+                        <label>Last Name:*</label>
+                        <input class="w3-input" type="text" placeholder="Enter your surname.." required>
+                    </p>
+                    <p>
+                        <label>Email:*</label>
+                        <input class="w3-input" type="email" placeholder="Enter your email address.." required>
+                    </p>
+                    <p>
+                        <label>Question:*</label>
+                        <textarea class="w3-input textarea" type="text" placeholder="Enter your question.." required></textarea>
+                    </p>
+                    <p>
+                        <button class="w3-btn w3-center w3-green">Submit</button>
+                    </p>
+
+                </div>
+            </div>
+            <hr id="about">
+
+            <!-- Footer -->
+            <footer class="w3-row-padding w3-padding-32">
+                <div class="w3-center">
+                    <div class="w3-container w3-purple">
+                        <h2>Abongile Nyhanyhawe</h2>
+                    </div>
+                    <div class="w3-container w3-orange w3-justify">
+                        <h3 class="w3-text-white">
+                            Contact: 078 765 8894
+                        </h3>
+                        <p><a href="mailto:abongilenyhanyhawe@gmail.com" class="w3-text-white">abongilenyhanyhawe@gmail.com</a></p>
+                        <p class="w3-text-white">Address: 51 Textile Street, Vulindlela Heights, Mthatha</p>
+                        <p><h2><a href="Developer.html" class="w3-text-white">Developer(s) </a></h2></p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- End page content -->      
+
+        <script>
+            function Change_tab(tab) {
+                if (tab == 'Q') {
+                    document.getElementById("queries").style.display = "block";
+                    document.getElementById("gallary").style.display = "none";
+                    document.getElementById("pictures").style.display = "none";
+
+                    document.getElementById("Hnavtabz").classList.remove("w3-green");
+                    document.getElementById("Qnavtabz").classList.add("w3-green");
+                    document.getElementById("Gnavtabz").classList.remove("w3-green");
+                }
+                else if (tab == 'G')
+                {
+                    document.getElementById("gallary").style.display = "block";
+                    document.getElementById("pictures").style.display = "none";
+                    document.getElementById("queries").style.display = "none";
+
+                    document.getElementById("Qnavtabz").classList.remove("w3-green");
+                    document.getElementById("Gnavtabz").classList.add("w3-green");
+                    document.getElementById("Hnavtabz").classList.remove("w3-green");
+                }
+                else {
+                    document.getElementById("queries").style.display = "none";
+                    document.getElementById("gallary").style.display = "none";
+                    document.getElementById("pictures").style.display = "block";
+
+                    document.getElementById("Qnavtabz").classList.remove("w3-green");
+                    document.getElementById("Hnavtabz").classList.add("w3-green");
+                    document.getElementById("Gnavtabz").classList.remove("w3-green");
+                }
+                document.getElementById()
+            }
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+            //Script to show and hide tabs
+            function openTab(userTab) {
+                var i;
+                var x = document.getElementsByClassName("user");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(userTab).style.display = "block";
+                document.getElementById(userTab).style.color = "green";
+            }
+
+
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            carousel(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-white";
+
+            }
+
+            function carousel(n) {
+                var i = n;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                dots[slideIndex - 1].className += " w3-white";
+
+                slideIndex++;
+                if (slideIndex > x.length) { slideIndex = 1 }
+                x[slideIndex - 1].style.display = "block";
+                setTimeout(carousel, 10000); // Change image every 10 seconds
+            }
+            function myFunction() {
+                var x = document.getElementById("navi");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+
+        </script>
+<script>
+$(document).ready(function(){
+
+$("#myPictures").append('<img class="mySlides w3-animate-left" src="images/IMG-20171215-WA0000.jpg" style="width:100%;display:block;" />');
+$("#myButtons").append('<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>');
+
+    for(var ix = 1;ix <= 8; ix++)
+{
+$("#myPictures").append('<img class="mySlides w3-animate-left" src="images/IMG-20171215-WA000' + ix + '.jpg" style="width:100%" />');
+$("#myButtons").append('<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(' + (ix + 1) + ')"></span>');
+
+}
+        
+   
+});
+</script>
+    </form>
+</body>
+</html>
+

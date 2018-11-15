@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Developer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/w3css/4/w3.css" />
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            padding: 25px;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+            button:hover, a:hover {
+                opacity: 0.7;
+            }
+    </style>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <h2 style="text-align:center">Developer(s)</h2>
+    <div class="w3-container w3-row">
+        <div class="w3-half">
+            <div class="card">
+                <img src="images/team1.jpg" alt="Mike" style="width:100%" />
+                <h1>Mike Sifanele</h1>
+                <p class="title">Software Developer</p>
+                <p>Nelson Mandela University,<br/>Software Development</p>
+                <div style="margin: 24px 0;">
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <p><button>Contact</button></p>
+            </div>
+        </div>
+        <div class="w3-half">
+            <div class="card">
+                <img src="images/team2.jpg" alt="Tovia" style="width:100%" />
+                <h1>Tovia Moloto</h1>
+                <p class="title">Software Developer</p>
+                <p>University of Pretoria,<br/>Mathematical Science</p>
+                <div style="margin: 24px 0;">
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <p><button>Contact</button></p>
+            </div>
+        </div>
+    </div>
+        </form>
+</body>
+</html>
